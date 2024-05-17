@@ -1,0 +1,38 @@
+.fullpage {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.background {
+    background-image: url("../img/fundoAmarelo.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.mandatorio {
+    scroll-snap-align: start;
+}
+
+.container {
+    height: 100vh;
+    max-width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: auto 6fr 2fr 2fr;
+    grid-template-columns: 90px 1fr;
+    place-content: center;
+    position: relative;
+}
+
+.container-conteudo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-right: 6rem;
+    padding-left: 4rem;
+}

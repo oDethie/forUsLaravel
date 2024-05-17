@@ -1,0 +1,176 @@
+.main {
+    grid-column: 2;
+    grid-row: 2;
+    padding-right: 2rem;
+}
+
+.conteudo {
+    padding-top: 8rem;
+    display: grid;
+    align-content: start;
+    gap: 1rem;
+}
+
+.conteudo-nome {
+    font-size: 1.1rem;
+    color: #FEFEFE;
+    font-family: "Anta", sans-serif;
+}
+
+.conteudo-line {
+    width: 300px;
+    height: 1px;
+    background-color: #4e4e4e;
+}
+
+.conteudo-line::after {
+    content: "";
+    background-color: #F2710C;
+    width: 0%;
+    height: 1px;
+    display: block;
+    animation: line-span 2s forwards;
+}
+
+.conteudo-frase {
+    color: #FEFEFE;
+    font-family: "Bai Jamjuree", sans-serif;
+    opacity: 20%;
+}
+
+.conteudo-frase-main {
+    font-size: 1.1rem;
+    opacity: 100%;
+    letter-spacing: 1px;
+}
+
+.conteudo-main {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.conteudo-main h1 {
+    font-size: 2.3rem;
+    color: #FEFEFE;
+    font-family: "Bai Jamjuree", sans-serif;
+    line-height: 1.2;
+    font-weight: bold;
+}
+
+.conteudo-main h1 span {
+    color: #F2710C;
+}
+
+.conteudo-main p {
+    color: #FEFEFE;
+    font-size: 1.2rem;
+    padding-top: 2rem;
+    font-family: "Nunito", sans-serif;
+    opacity: 80%;
+}
+
+.conteudo-main p .sublinhado {
+    position: relative;
+}
+
+.conteudo-main p .sublinhado::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #F2710C;
+    display: block;
+    left: 0;
+    animation: subli 0.3s forwards;
+}
+
+.conteudo-main p::after {
+    content: "|";
+    margin-left: 2px;
+    opacity: 1;
+    animation: pisca 0.7s infinite;
+}
+
+.seta-down {
+    grid-row: 3;
+    place-self: center;
+}
+
+.seta-down img{
+    animation: pulse 1.2s infinite;
+}
+
+@keyframes pulse {
+    from {
+      transform: scale3d(1, 1, 1);
+    }
+  
+    50% {
+      transform: scale3d(1.2, 1.2, 1.2);
+    }
+  
+    to {
+      transform: scale3d(1, 1, 1);
+    }
+}
+  
+.pulse {
+    animation-name: pulse;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes pisca {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes line-span {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 70%;
+    }
+}
+
+/* Parte animada profissões */
+
+.text-rotation {
+    display: flex;
+}
+
+.rotation {
+    display: inline-flex;
+    vertical-align: top;
+    margin: 0;
+}
+
+.word {
+    position: absolute;
+    display: flex;
+    opacity: 0;
+    color: #F2710C;
+}
+
+.word .letter {
+    transform-origin: center center 25px;
+}
+
+.word .letter.out {
+    transform: rotateX(90deg);
+    transition: 0.32s cubic-bezier(0.6,0,0.7,0.2);
+}
+
+.word .letter.in {
+    transition: 0.8s ease;
+}
+
+.word .letter.behind {
+    transform: rotateX(-90deg);
+}
+

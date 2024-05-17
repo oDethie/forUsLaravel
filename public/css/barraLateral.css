@@ -1,0 +1,90 @@
+.aside-row {
+    grid-column: 1;
+    grid-row: 1;
+    padding: 2rem;
+    position: relative;
+    background-color: #3a3a3a;
+}
+
+.aside-row::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background-color: #3a3a3a;
+    top: 0;
+    right: 0;
+}
+
+.aside-rows {
+    display: grid;
+    place-content: center;
+    height: 100%;
+    gap: 6px;
+}
+
+.aside-rows-1 {
+    width: 24px;
+    height: 1px;
+    background-color: #FEFEFE;
+}
+
+.aside-rows-2 {
+    width: 16px;
+    height: 1px;
+    background-color: #FEFEFE;
+}
+
+.aside-rows-3 {
+    width: 8px;
+    height: 1px;
+    background-color: #FEFEFE;
+}
+
+.aside-vazio {
+    grid-column: 1;
+    grid-row: 2;
+    position: relative;
+}
+
+.aside-vazio::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background-color: #3a3a3a;
+    top: 0;
+    right: 0;
+}
+
+.aside-midia {
+    grid-column: 1;
+    grid-row: 3/5;
+    padding: 2rem;
+    position: relative;
+}
+
+.aside-midia::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background-color: #3a3a3a;
+    top: 0;
+    right: 0;
+}
+
+.midia {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-around;
+}
+
+
+.midia a {
+    text-align: center;
+    transform: rotate(-90deg);
+    color: #F2710C;
+    font-family: "Nunito", sans-serif;
+}
