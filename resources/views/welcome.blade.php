@@ -79,7 +79,7 @@
                     <div class="desc-comunidade desc-container">
                         <h1>Comunidade</h1>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, possimus!</p>
-                        <div><a href="#">Cadastre-se</a></div>
+                        <div><a href="/cadastro">Cadastre-se</a></div>
                     </div>
                 </article>
             </div>
